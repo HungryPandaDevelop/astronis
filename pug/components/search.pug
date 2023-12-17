@@ -1,0 +1,24 @@
+mixin search(on)
+	.search-container
+		div(class="search" + (on ? " class=search-on" : ""))
+			input(type="text" placeholder="Поиск").search-input
+			a(href="#")
+			i.close-btn
+		if on === true
+			.search-list.active
+				.search-list-line
+					h3 Яхты
+					ul.ln 
+						li 
+							a(href="#") Malibu Wakesetter 25 LSV
+						li 
+							a(href="#") Super Air Nautique G23
+				.search-list-line
+					h3 Яхты
+					ul.ln 
+						li 
+							a(href="#") Malibu Wakesetter 25 LSV
+						li 
+							a(href="#") Super Air Nautique G23
+		if on === 'load'
+			+spinner()

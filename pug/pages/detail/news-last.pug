@@ -1,0 +1,11 @@
+section.slider-section
+	.main-full
+		.head-section.slider-section-head
+			h2.title-section Другие статьи
+			.btn-container 
+				a.btn.btn--blue(href="#") СМОТРЕТЬ ВСЕ
+			.stab-arrow
+	.main-full
+		.multy-slider
+			-for (var i=0; i < 7; i++)
+				+newsItem("Lorem ipsum","Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum","11.12.2022")

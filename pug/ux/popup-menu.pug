@@ -1,0 +1,34 @@
+include ../default/build-header
+	.main-full
+		| header
+	.main-full
+		h1 Popup
+	+popup-template(1,'menu-hamburger','show') 
+			nav.popup-nav
+				ul.ln
+						li
+							a(href="#") Главная
+						li
+							a(href="#") Услуги
+						li
+							a(href="#") О компании
+						li
+							a(href="#") Контакты
+			.feedback-nav
+				ul.ln
+					li 
+						a.phone-btn(href="tel:+79852826532") 
+							i 
+							span +7(985)282-65-32
+					li
+						a.mail-btn(href="mailto:mail@mail.ru") 
+							i 
+							span bink@inbox.ru
+					li
+						a.marker-btn(href="mailto:mail@mail.ru") 
+							i 
+							span Позать на карте
+			.social
+					+social(["v","tl","fc","i"])
+			.btn-container 
+				a(href="#").btn.btn--blue ПЕРЕЗВОНИТЬ МНЕ

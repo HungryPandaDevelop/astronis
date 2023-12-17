@@ -1,0 +1,35 @@
+.tag
+  background-color: $grayColor
+  color: $whiteColor
+  font-weight: 600
+  border-radius: 30px
+  display: inline-block
+  padding: 0 14px
+  margin: 0 8px 15px 0
+  text-decoration: none
+  &:hover
+    background-color: $blackColor
+    color: $greenColor
+.link
+  font-weight: 700
+  font-size: $standartSize
+  color: $greenColor
+  &:hover
+    color: $orangeColor
+
+.phone-ico
+  @include icoEl(18px, 22px, '../images/icons/phone-black.svg')
+
+.mail-ico
+  @include icoEl(18px, 20px, '../images/icons/mail-black.svg')
+.marker-ico
+  @include icoEl(20px, 16px, '../images/icons/marker-black.svg')
+.date-ico
+  @include icoEl(20px, 16px, '../images/icons/calendar-black.svg', text-top)
+  margin-right: 8px
+.view-ico
+  @include icoEl(20px, 16px, '../images/icons/view-black.svg', text-top)
+  margin-right: 8px
+.rewiews-ico
+  @include icoEl(20px, 16px, '../images/icons/rew-black.svg', text-top)
+  margin-right: 8px

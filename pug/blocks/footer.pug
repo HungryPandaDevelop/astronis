@@ -1,0 +1,57 @@
+footer
+	.main-grid
+		.col-3.logo-container
+			a.logo(href="./index.html")
+				img(src="/images/logo.jpg", alt="")
+			.logo-text Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod, velit? Maxime autem iure nisi pariatur quasi harum! Ipsam amet dolore animi ea illo iste molestias error qui, natus, explicabo earum!
+			+search(false)
+		.col-3
+			.nav
+				h3 
+					a(href="#")  Title
+				ul
+					each val in ["Link 1","Link 2","Link 3"]
+						li  
+							a(href="#") 
+								= val
+		
+		.col-3
+			.nav.nav-second
+				ul
+					each val in ["Блог","O компании","Отзывы","Контакты"]
+						li  
+							a(href="#") 
+								= val
+		.col-3.feedback
+			h3 
+				a(href="#") Наши Контакты
+			.feedback-footer-item
+				a.marker-btn(href="#") 
+					i
+					span Dubai Harbour Marina
+			.feedback-footer-item
+				a.mail-btn(href="#")
+					i
+					span mail@mail.ru
+			.feedback-footer-item
+				a.phone-btn(href="#") 
+					i
+					span + 971 56 115 16 24
+			.feedback-footer-item
+				a.whatsapp-btn(href="#") 
+					i
+					span + 971 56 115 16 24
+			.btn-container 
+				a.btn.btn--blue.btn-element(href="#").element-btn(data-element="1")
+					span перезвоните мне
+					i
+			.social-default
+				+social(["fc","i"])
+		.col-12
+			ul.footer-links
+				li
+					a(href="#") Карта сайта
+				li
+					a(href="#") Политика конфиденциальности
+				li
+					| © 2022 HangryPandaDev

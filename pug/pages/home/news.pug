@@ -1,0 +1,13 @@
+section.news.slider-section
+	.main-full
+		.head-section
+			h2
+				| News
+			.btn-container
+				a(href="#").btn.btn--blue Смотреть все News 
+			.stab-arrow
+	.main-full
+		.multy-slider
+			-for(var x = 0; x < 7; x++)
+				+newsItem("Добавьте пленительного шарма вашему празднику","Профессиональный танец живота неизменно удивляет, очаровывает и погружает в атмосферу восточной сказки. Отныне и у наших гостей появилась…","10 октября 2022")
+	

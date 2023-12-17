@@ -1,0 +1,24 @@
+doctype html
+html
+	// head start
+	include ../default/head.pug 
+	// head end
+	include ../components/connect-mixins.pug  
+	body
+	.stub
+	.main-full
+		h2 news, reviews, services, product, product-line
+	section
+		.main-grid 
+			.col-4
+				+reviewsItem('Wake dubai', 'Неважно, новичок вы или опытный любитель водных видов спорта, присоединяйтесь к нам и получите удовольствие от вейкбординга и вейксерфинга на наших новейших спортивных катерах Nautique, Centurion!', '16.09.1986')
+			.col-4 
+				+newsItem('Wake dubai', 'Неважно, новичок вы или опытный любитель водных видов спорта, присоединяйтесь к нам и получите удовольствие от вейкбординга и вейксерфинга на наших новейших спортивных катерах Nautique, Centurion!', '16.09.1986')
+			.col-4
+				+servicesItem('Кейтеринг на яхте','от 850 AED/час','/images/temp/serv/1.jpg')
+			.col-4
+				+productItem("Аренда Azimut 62 Lucky Star","850 AED/час")
+			.col-8
+				+productItemLine("Аренда Azimut 62 Lucky Star","850 AED/час")
+			.col-4
+				+advantagesItem('Собственный флот','/images/temp/adv/1.svg')

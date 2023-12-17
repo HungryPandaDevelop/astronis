@@ -1,0 +1,12 @@
+section.blog.slider-section
+	.main-full
+		.head-section
+			h2
+				| Продукты
+			.btn-container
+				a(href="#").btn.btn--blue Смотреть все 
+			.stab-arrow
+	.main-full
+		.multy-slider
+			-for(var x = 0; x < 7; x++)
+				+productItem("Аренда Azimut 62 Lucky Star","850 AED/час")

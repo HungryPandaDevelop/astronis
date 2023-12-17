@@ -1,0 +1,68 @@
+$icoSize: 24px
+$icoOffset: 8px
+
+.close-btn
+	@include icoEl($icoSize, $icoSize, "../images/icons/close-black.svg")
+	cursor: pointer
+	&:hover
+		background-image: url("../images/icons/close-gray.svg")
+
+.hamburger-btn
+	@include icoEl(38px, 38px, "../images/icons/hamburger-white.svg", middle, contain, center right)
+	cursor: pointer
+	&:hover
+		background-image: url("../images/icons/hamburger-blue.svg")
+
+@mixin icoBtn($ico, $icoHover)
+	border-color: $blackColor
+	i,span
+		display: inline-block
+		vertical-align: middle
+	i
+		margin-left: $icoOffset
+		margin-right: $icoOffset
+		@include icoEl($icoSize, $icoSize, $ico)
+	@if $icoHover
+		&:hover
+			color: $grayColor
+			i
+				background-image: url($icoHover)
+
+.phone-btn
+	@include icoBtn("../images/icons/phone-black.svg", "../images/icons/phone-gray.svg")
+.mail-btn
+	@include icoBtn("../images/icons/mail-black.svg", "../images/icons/mail-gray.svg")
+.marker-btn
+	@include icoBtn("../images/icons/marker-black.svg", "../images/icons/marker-gray.svg")
+.whatsapp-btn
+	@include icoBtn("../images/social/whatsapp-black.svg", false)
+	border-color: $blackColor
+
+.prev-btn
+	@include icoBtn("../images/arrows/arrow-left-black.svg", "../images/arrows/arrow-left-gray.svg")
+
+.next-btn
+	@include icoBtn("../images/arrows/arrow-right-black.svg", "../images/arrows/arrow-right-gray.svg")
+// .video-btn
+// 	cursor: pointer
+// 	span
+// 		border-radius: 100%
+// 		@include positionElement(76px, 76px, 50%, 50%)
+// 		transform: translateX(-50%) translateY(-50%)
+// 		border: 2px solid $yellowColor
+// 		transition: ease-out 0.5s
+// 	i
+// 		border-radius: 100%
+// 		@include positionElement(54px, 54px, 50%, 50%)
+// 		transform: translateX(-50%) translateY(-50%)
+// 		background-color: $yellowColor
+// 		@include bgImageEl("../images/icons/play-white.svg", 15px, 22px)
+// 		transition: ease-out 0.5s
+// 	&:hover
+// 		span
+// 			width: 80px
+// 			height: 80px
+// 		i
+// 			width: 50px
+// 			height: 50px
+// 			background-position: 19px

@@ -1,0 +1,38 @@
+mixin productItem(name, text, data, info)
+	.product-item
+		.product-item-img
+			.product-item-cover.img-cover
+				img(src="/images/temp/product/1.jpg", alt="")
+			.product-item-liked
+		.product-item-info 
+			h3
+				a(href="#")=name
+			if (!info)
+				ul.ln.product-item-description
+					li
+						b Назначение:
+						div Круизы по Дубаю, вечеринки, рекреационная деятельность
+					li
+						b Вервь:
+						div Azimut, Италия
+			.product-item-price=text
+			.product-item-adv
+				.product-adv-icons 
+					.product-adv-icon.product-adv-icon-1
+					span 
+						|18,9 м.(62 ft.)
+				.product-adv-icons 
+					.product-adv-icon.product-adv-icon-2
+					span 
+						|29 гостей 
+				.product-adv-icons 
+					.product-adv-icon.product-adv-icon-3
+					span 
+						|3 человека
+				.product-adv-icons 
+					.product-adv-icon.product-adv-icon-4
+					span 
+						|3 каюты
+			.btn-product-container
+				a(href="#").btn.btn--blue Забронировать
+				a(href="#").btn.btn--blue-border Подробнее
