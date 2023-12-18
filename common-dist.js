@@ -29,14 +29,32 @@ partnersSlider.lightSlider({
 let multySlider = $('.multy-slider');
 
 multySlider.lightSlider({
-  item: 3,
+  item: 2,
   loop:false,
+  // mode: 'fade',
   slideMove:1,
   easing: 'cubic-bezier(0.25, 0, 0.25, 1)',
   speed:600,
-  adaptiveHeight: true,
-
-});  
+  // useCSS:false,
+  // adaptiveHeight: true,
+  slideMargin: 30,
+  addClass: 'news-slider-container',
+  onSliderLoad: function (el) {
+    // $(el).find('.active').next().next().addClass("next-a")
+    $(el).find('.lslide').each(function(index){
+      $(this).addClass('next-'+index)
+    })
+    
+    //.nextAll().addClass("next-b")
+},
+  onBeforeSlide: function (el) {
+      // $(el).find('.lslide').removeClass("next-a")
+      $(el).find('.lslide').removeClass("next-b")
+      // $(el).find('.active').next().next().addClass("next-a")
+      $(el).find('.active').nextAll().addClass("next-b")
+      // console.log('onBeforeStart',el);
+    } 
+  });  
 
 
 
@@ -62,6 +80,7 @@ thumbSliderVericale.lightSlider({
   item:1,
   vertical:true,
   verticalHeight:300,
+  
   enableDrag: true,
   controls: false,
   // vThumbWidth:50,

@@ -1,0 +1,30 @@
+.projects-slider
+  height: 780px
+  position: relative
+  outline: 1px solid red
+.projects-item-img
+  .img-cover
+    position: absolute
+
+.projects-item-gradient
+  @include positionElement(100%,100%,0,0)
+  @include bgImageEl("/images/project-shadow.png", cover)
+.projects-item
+  display: flex
+  height: 100%
+  h3
+    font-size: 24px
+    color: $whiteColor
+    margin: 45px 0 15px
+    font-weight: 500
+  .main-grid
+    margin-top: auto
+    margin-bottom: 45px
+.projects-item-text
+  margin-bottom: 30px
+.projects-item-last
+  display: flex
+
+  .more-btn
+    margin-top: auto
+    margin-left: auto
