@@ -1,11 +1,15 @@
-section.partners
-  .main-grid 
-    .col-2
-    .col-10 
-      .partners-about
-        |В арсенале компании имеются технические средства и знания для разработки, внедрения и сопровождения решений в области информационных и телекоммуникационных технологий, отвечающих задачам роста и повышения эффективности современного бизнеса.
-  .main-full
-    .partners-slider
-      -for (var i=1; i < 12; i++)
-        .partners-item 
-          img(src="/images/temp/partners/1.jpg", alt="")
+section.partners.animate-section(data-topic="Партнеры")
+	.main-grid 
+		.col-2.col-xs-12
+			.section-topic 
+				span Партнеры
+				i 
+		.col-10.col-xs-12
+			.head-section
+				|В арсенале компании имеются технические средства и знания для разработки, внедрения и сопровождения решений в области информационных и телекоммуникационных технологий, отвечающих задачам роста и повышения эффективности современного бизнеса.
+	.main-grid 
+		.col-10.col-offset-3.col-offset-xs-1.col-xs-12
+			.partners-slider
+				-for (var i=1; i < 5; i++)
+					.partners-item 
+						img(src="/images/temp/partners/"+i+".svg", alt="")

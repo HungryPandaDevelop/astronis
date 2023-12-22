@@ -1,6 +1,7 @@
 .partners
   padding: 75px 0 56px
   .lSSlideWrapper
+    overflow: visible
     // padding: 0 60px
     // &::before,
     // &::after
@@ -15,6 +16,13 @@
       z-index: 2
 .partners-slider-container
   padding-bottom: 60px
+  overflow: visible
+  position: relative
+  &::before
+    content: ""
+    @include positionElement(100%,100%,100%,0,right, top,2)
+    background-color: $blackColor
+
 .partners-item
   border: 1px solid $blackColor
   text-align: center

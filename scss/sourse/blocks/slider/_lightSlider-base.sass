@@ -48,7 +48,7 @@
     transition: ease-out 0.5s
     &::after
       content: ""
-      @include positionElement(5px, 5px, 50%, 50%)
+      @include positionElement(12px, 12px, 50%, 50%)
       border-radius: 100%
       background-color: $grayColor
       transform: translateX(-50%) translateY(-50%)
@@ -56,6 +56,6 @@
     &.active,
     &:hover
       a
-        border-color: rgba($blackColor, 1)
+        // border-color: rgba($whiteColor, 1)
         &::after
-          background-color: $blackColor
+          background-color: $whiteColor

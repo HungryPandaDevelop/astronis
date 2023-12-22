@@ -2,13 +2,11 @@
 footer
   position: relative
 
-  background-color: $whiteColor
-  color: $blueColor
-  font-size: $smallSize
+  background-color: $blackColor
+  color: $whiteColor
 
   .main-grid
-    border-top: 1px solid $grayColorSecond
-    padding: 70px 15px 30px
+    padding: 0px 15px 30px
   ul,li
     list-style: none
     padding: 0
@@ -16,11 +14,7 @@ footer
   a
     text-decoration: none
     &:hover
-      color: $goldColor
-
-  .logo-text
-    font-size: $smallSize
-    margin: 0 0 45px
+      color: $blueColor
 
   .footer-links
     display: flex
@@ -28,29 +22,24 @@ footer
     li
       margin-bottom: 11px
 
-  .social
-    margin-top: 15px
-
   .nav
     font-size: $standartSize
     margin-bottom: 50px
     li
       margin-bottom: 12px
-  .nav-second
-    text-transform: uppercase
-    a
-      font-weight: 600
-
-  h3
-    font-size: $mediumSize
-    color: inherit
-    margin: 0 0 13px
-    text-transform: uppercase
-    a
-      font-weight: 600
-
+.footer-links
+  font-size: 12px
 .feedback-footer-item
-  display: flex
+
   margin: 0 0 15px
+  font-size: 14px
+  text-align: right
   i
     margin-right: 10px
+
+@media (max-width: 576px)
+  .feedback-footer-item
+    text-align: left
+  footer
+    .footer-links
+      display: block

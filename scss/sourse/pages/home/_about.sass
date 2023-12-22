@@ -1,9 +1,9 @@
 .about-section
-  height: 100vh
-  outline: 1px solid red
+  height: 750px
   position: relative
+  overflow: hidden
   .about-text
-    padding-top: 90px
+    // padding-top: 90px
   .btn-container
     padding-top: 90px
     text-align: right
@@ -14,3 +14,31 @@
   height: 100%
   top: 0
   height: 720px
+  // display: none
+.sphere
+  position: absolute
+  left: -500px
+  top: 00px
+  width: 1650px
+  height: 800px
+  opacity: 0.1
+.about-container
+  position: relative
+  z-index: 2
+@media (max-width: 1280px)
+  .about-section
+    height: 550px
+  .about-img
+    height: 470px
+  .sphere
+    width: 1000px
+    height: 600px
+@media (max-width: 576px)
+  .about-img
+    display: none
+  .about-section
+    height: auto
+  .about-section
+    .btn-container
+      padding-top: 50px
+      text-align: left

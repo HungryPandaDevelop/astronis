@@ -7,20 +7,68 @@ defaultSlider.lightSlider({
   easing: 'cubic-bezier(0.25, 0, 0.25, 1)',
   speed:600,
   addClass: 'default-slider-light',
-  adaptiveHeight: true,
+  // adaptiveHeight: true,
+
+});  
+
+let serviceSlider = $('.service-slider');
+
+serviceSlider.lightSlider({
+  item:1,
+  loop:true,
+  controls:false,
+  slideMove:1,
+  easing: 'cubic-bezier(0.25, 0, 0.25, 1)',
+  speed:600,
+  addClass: 'service-slider-light',
+  // adaptiveHeight: true,
+  // onSliderLoad: function (el) {
+  //   $(el).find('.service-item').removeClass('show').eq(multySlider.getCurrentSlideCount()).addClass('show')
+  // },
+  // onBeforeSlide: function (el) {
+  //   $(el).find('.service-item').removeClass('show').eq(multySlider.getCurrentSlideCount()).addClass('show')
+  // }
+});  
+
+let projectsSlider = $('.projects-slider');
+
+projectsSlider.lightSlider({
+  item:1,
+  loop:false,
+  controls:false,
+  slideMove:1,
+  easing: 'cubic-bezier(0.25, 0, 0.25, 1)',
+  speed:600,
+  addClass: 'project-slider-light',
+  // adaptiveHeight: true,
 
 });  
 
 let partnersSlider = $('.partners-slider');
 
 partnersSlider.lightSlider({
-  item: 4,
+  // item: 4,
   loop: true,
   slideMove:1,
+  controls:false,
   easing: 'cubic-bezier(0.25, 0, 0.25, 1)',
   speed:600,
   addClass: 'partners-slider-container',
   // adaptiveHeight: true,
+  responsive : [
+    {
+        breakpoint:1920,
+        settings: {
+            item:4,
+          }
+    },
+    {
+        breakpoint:576,
+        settings: {
+            item:2,
+          }
+        }
+    ]
 });  
 
 
@@ -30,6 +78,8 @@ multySlider.lightSlider({
   item: 2,
   loop:false,
   // mode: 'fade',
+  controls:false,
+  
   slideMove:1,
   easing: 'cubic-bezier(0.25, 0, 0.25, 1)',
   speed:600,
@@ -37,22 +87,50 @@ multySlider.lightSlider({
   // adaptiveHeight: true,
   slideMargin: 30,
   addClass: 'news-slider-container',
+  responsive : [
+    {
+        breakpoint:1920,
+        settings: {
+            item:2,
+            // controls: true,
+            enableDrag:false,
+          }
+    },
+    {
+        breakpoint:576,
+        settings: {
+            item:1,
+            // controls:false,
+            enableDrag:true,
+          }
+        }
+  ],
   onSliderLoad: function (el) {
-    // $(el).find('.active').next().next().addClass("next-a")
+
     $(el).find('.lslide').each(function(index){
-      $(this).addClass('next-'+index)
-    })
+      if(index>1){
+        $(this).css({'transform':'translateX(-'+index*100+'px)', 'zIndex': -1*index})
+        $(this).addClass('no-active')
+      }
+    });
     
     //.nextAll().addClass("next-b")
 },
   onBeforeSlide: function (el) {
-      // $(el).find('.lslide').removeClass("next-a")
-      $(el).find('.lslide').removeClass("next-b")
-      // $(el).find('.active').next().next().addClass("next-a")
-      $(el).find('.active').nextAll().addClass("next-b")
+
+      $(el).find('.lslide').eq(multySlider.getCurrentSlideCount()).css({'transform':'translateX(-'+0+'px)'})
+      $(el).find('.lslide').each(function(index){
+        if(index>multySlider.getCurrentSlideCount()){
+          $(this).css({'transform':'translateX(-'+(index-multySlider.getCurrentSlideCount())*100+'px)', 'zIndex': -1*index})
+          $(this).addClass('no-active')
+        }
+      });
       // console.log('onBeforeStart',el);
     } 
-  });  
+  },
+
+
+  );  
 
 
 

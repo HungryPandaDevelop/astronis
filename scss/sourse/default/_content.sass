@@ -28,17 +28,26 @@ section
 
 .head-section
 	margin-bottom: 30px
+	font-size: 21px
+	color: $blueColor
+	background: #83D7FF
+	background: linear-gradient(to top right, #83D7FF 10%, #37AAE1 90%)
+	-webkit-background-clip: text
+	-webkit-text-fill-color: transparent
+	font-weight: 500
 
-	h3
-		font-size: $mediumSize
-		color: $grayDarkColor
-		font-weight: 500
-		a
-			color: $goldColor
-			text-decoration: none
-			&:hover
-				text-decoration: underline
-
+.section-topic
+	margin-top: -30px
+	position: relative
+	z-index: 4
+	i
+		display: inline-block
+		width: 100px
+		height: 2px
+		background-color: $blueColor
+	span
+		display: block
+		color: $blueColor
 .btn-container-section
 	padding: 40px 0 0px
 	text-align: center
@@ -80,3 +89,6 @@ section
 
 .section-stub
 	height: 75px
+@media (max-width: 576px)
+	.head-section
+		font-size: 14px

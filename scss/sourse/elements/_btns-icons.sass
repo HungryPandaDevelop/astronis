@@ -29,12 +29,17 @@ $icoOffset: 8px
 				background-image: url($icoHover)
 
 .phone-btn
-	@include icoBtn("../images/icons/phone-black.svg", "../images/icons/phone-gray.svg")
+	@include icoBtn("../images/icons/phone-white.svg", "../images/icons/phone-blue.svg")
+	&:hover
+		color: $blueColor
 .mail-btn
-	@include icoBtn("../images/icons/mail-black.svg", "../images/icons/mail-gray.svg")
-
+	@include icoBtn("../images/icons/mail-white.svg", "../images/icons/mail-blue.svg")
+	&:hover
+		color: $blueColor
 .marker-btn
 	@include icoBtn("../images/icons/marker-black.svg", "../images/icons/marker-gray.svg")
+	&:hover
+		color: $blueColor
 .whatsapp-btn
 	@include icoBtn("../images/social/whatsapp-black.svg", false)
 	border-color: $blackColor
@@ -47,6 +52,8 @@ $icoOffset: 8px
 
 .more-btn
 	@include icoBtn("../images/arrows/carret-right-blue.svg", "../images/arrows/carret-right-white.svg")
+	i
+		background-size: 32px
 	&:hover
 		color: $blueColor
 // .video-btn

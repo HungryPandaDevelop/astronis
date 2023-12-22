@@ -3,8 +3,8 @@
   height: 70px
 
 header
-  @include positionElement(100%, auto, 0, auto, left, top, 3, fixed )
-  padding: 12px 0
+  @include positionElement(100%, auto, 0, auto, left, top, 6, fixed )
+  padding: 25px 0
   // color: $blueColor
   // background-color: $whiteColor
   // border-bottom: 1px solid $whiteColorSecond
@@ -72,3 +72,105 @@ header
     &:hover
       i
         background-image: url("../images/arrows/carret-down-gray.svg")
+
+.hamburger
+  width: 20px
+  height: 40px
+  margin-left: auto
+  margin-right: 30px
+  // left: 36px
+  // top: 50%
+  // position: fixed
+  transform: rotate(-90deg) scale(1.4)
+  position: relative
+  display: block
+  z-index: 2
+  cursor: pointer
+  transition: ease-out 0.5s
+  // outline: 1px solid red
+.hamburger .h-line-box
+  width: 100%
+  height: 100%
+  left: 0
+  top: 0
+  position: absolute
+  display: block
+  z-index: auto
+  overflow: hidden
+.hamburger .h-line
+  width: 2px
+  height: 40%
+  left: 0
+  bottom: 0
+  position: absolute
+  display: block
+  z-index: auto
+  background: $whiteColor
+  transition: ease-out 0.5s
+
+  &-1
+    margin-left: 4px
+
+  &-2
+    left: 100%
+    height: 100%
+    transition-delay: 0.25s
+    margin-left: -4px
+
+  &-3
+    bottom: -50px
+    margin-left: 4px
+
+  &-4
+    left: 100%
+    height: 100%
+    bottom: -50px
+    transition-delay: 0s
+    margin-left: -4px
+
+  &-5
+    transform: translateX(-20px) translateY(20px) rotate(45deg)
+
+  &-6
+    transform: translateX(20px) translateY(20px) rotate(-45deg)
+
+.hamburger .text
+  transform: translateY(-50px) rotate(-90deg)
+
+.hamburger:hover .h-line
+  background: $blueColor
+
+.hamburger:hover .h-line-1
+  height: 100%
+  bottom: 100%
+  transition-delay: 0.25s
+
+.hamburger:hover .h-line-2
+  bottom: 100%
+  transition-delay: 0s
+
+.hamburger:hover .h-line-3
+  height: 60%
+  bottom: 0
+  transition-delay: 0.25s
+
+.hamburger:hover .h-line-4
+  bottom: 0
+  transition-delay: 0.25s
+
+.hamburger.active .h-line-1,
+.hamburger.active .h-line-2,
+.hamburger.active .h-line-3,
+.hamburger.active .h-line-4
+  bottom: 100%
+
+.hamburger.active .h-line-5
+  transform: translateX(10px) translateY(-10px) rotate(45deg)
+
+.hamburger.active .h-line-6
+  transform: translateX(10px) translateY(-10px) rotate(-45deg)
+
+.hamburger.active .h-line-5,
+.hamburger.active .h-line-6
+  -webkit-transition-delay: 0.5s
+  background: $blueColor
