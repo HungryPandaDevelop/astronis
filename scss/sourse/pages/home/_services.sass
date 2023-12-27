@@ -10,32 +10,43 @@
     overflow: visible
 .service-slider-img
   position: absolute
-  left: 70%
-  right: 0
-  // height: 100%
-  top: 300px
-  bottom: 0
+  top: 0
+  left: 90%
+  width: 500px
+  height: 500px
+  transition: ease-out 0.25s
+  transform: translateX(-100px)
+  opacity: 0
   // height: 720px
   @include bgImageEl("/images/service.svg")
 .service-slider
   // height: 610px
   position: relative
 .service-item
-  background: linear-gradient(135deg, #37AAE1 18.64%, #0083C2 77.14%)
-  box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.25)
-  padding: 30px
-  border-radius: 0 50px 0 50px
+  position: relative
   transition: ease-out 0.5s
   opacity: 0
   &.active
     opacity: 1
+    .service-slider-img
+      transition-delay: 0.5s
+      transform: translateX(0)
+      opacity: 1
   h3
     color: inherit
     margin-bottom: 15px
-
+.service-item-inner
+  background: linear-gradient(135deg, #37AAE1 18.64%, #0083C2 77.14%)
+  box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.25)
+  padding: 30px
+  border-radius: 0 50px 0 50px
+  position: relative
+  z-index: 2
 @media (max-width: 576px)
   .service-item
     padding: 15px
     font-size: 14px
     h3
       font-size: 16px
+  .service-slider-img
+    display: none
