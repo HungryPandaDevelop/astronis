@@ -9,24 +9,24 @@
 .lSPrev,
 .lSNext
   @include positionElement(48px, 48px, auto, 0%)
-  background-color: $whiteColor
+  // background-color: $whiteColor
   font-size: 0
-  border: 1px solid $grayColor
+  // border: 1px solid $grayColor
   border-radius: 100%
   cursor: pointer
   transform: translateY(-50%)
   margin: 0 15px
   &:hover
-    background-color: $blackColor
-    border-color: $blackColor
+    // background-color: $blackColor
+    // border-color: $blackColor
 .lSPrev
   left: 0
-  @include bgImageEl("../images/arrows/carret-left-gray.svg")
+  @include bgImageEl("../images/arrows/carret-left-white.svg")
   &:hover
     background-image: url("../images/arrows/carret-left-white.svg")
 .lSNext
   right: 0
-  @include bgImageEl("../images/arrows/carret-right-gray.svg")
+  @include bgImageEl("../images/arrows/carret-right-white.svg")
   &:hover
     background-image: url("../images/arrows/carret-right-white.svg")
 

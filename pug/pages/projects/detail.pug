@@ -1,31 +1,64 @@
 include ../../default/build-header
+	include ../../blocks/popups
 	include ../../blocks/header
 	.stub
-	//- +roofContent("Lorem impusm")
-	.main-full
-		+breadcrumbs('Link')
-		h1 Site is started
-	include ../detail/roof.pug
+	.content
+		.main-full
+			h1 Модернизация сетевой инфраструктуры.
+		.main-content 
+			.main-grid
+				.col-8
+					.content-text 
+						p. 
+							Замена исторически сложившейся действующей
+							децентрализованной, замкнутой на магистральных операторов связи,
+							сети на централизованную сетевую инфраструктуру,
+							функционирующую на базе высокоскоростных и высоконадежных
+							магистральных каналов связи.
+						p.
+							Построение мультисервисной сети и системы унифицированных
+							коммуникаций. Сеть передачи данных, IP-телефония, унифицированные
+							коммуникации на тонком клиенте и на мобильных устройствах, организация
+							ВКС на рабочих местах, в переговорных комнатах, залах совещаний и
+							кабинетах руководителей; сервисы конференций, трансляции и записи
+							конференций, голосовых меню, голосовой почты, безопасных коммуникаций
+							через Internet, интеграция телефонных систем на базе Cisco, Avaya, Ericsson,
+							организация стыков с ТФОП.
+					.projects-description-item
+						h3 Процессы:
+						ul.custom-disk
+							li Работы по проектированию, монтажу ипусконаладке автоматизированных систем «Унифицированнаякоммуникационная платформа» и “Сеть передачи данных точек присутствия”
+							li Модернизация сетевой инфраструктуры и переход к централизованной схеме подключения точек присутствия банка с резервированием подключения через двух операторов связи
+							li Более 360 точек присутствия по стране
+							li Различные схемы подключения
+							li Установка и настройка оборудования
+							li Миграция со старой на новую инфраструктуру связи
+							li Разработка проектной и рабочей документации
+					.projects-description-item.projects-description-item--color
+						h3 Результаты:
+						ul.custom-disk
+							li Автоматизированные системы реализованы в головном офисе Заказчика и более чем на 360 региональных объектах на всей территории РФ
+							li В рамках работ по модернизации унифицированной коммуникационной платформы (УКП) произведено функциональное расширение системы – модернизация существующих подсистем и создание новых, существенно расширяющих спектр решаемых системой задач.
+				.col-1
+				.col-3 
+					.projects-info 
+						.projects-info-img
+							img(src="/images/temp/partners/1.svg", alt="")
+						.projects-info-hint 
+							.projects-info-city г. Москва
+							.projects-info-date
+								span Срок выполнения проекта:
+								b 3 месяца
 	
-	.main-grid.news-main
-		.col-6
-			.default-thumb-container
-				.thumb-slider
-					-for (x=0; x<10;x++)
-						li.default-slider-item(data-thumb="/images/temp/1.jpg" data-src="/images/temp/1.jpg")
-							img(src="/images/temp/1.jpg",  alt="")
-		.col-6
-			p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam molestias sunt similique eveniet! Quos eius doloremque mollitia, id magnam error obcaecati iste sequi commodi enim rem illo. Modi, possimus itaque!
-			.detail-links
-				.tags
-					a.tag(href="#") News 
-					a.tag(href="#") Last 
-					a.tag(href="#") Custom 
-				.social 
-					+social(["v","y","g","tl","i","wz","fc",])
-	include ../detail/tabs.pug
-	include ../detail/news-last.pug
-	include ../detail/reviews.pug 
-	include ../detail/comments.pug 
-	.stub
-	include ../../blocks/footer
+		.projects-slider-detail
+			-for (let i=0;i<3;i++)
+				.projects-slider-item 
+					.projects-slider-img.img-cover 
+						img(src="/images/serv-4.jpg", alt="")
+					.main-grid 
+						.col-5.projects-slider-col
+							.projects-slider-info Защищенный центр обработки данных ПАО «Газпром»
+	include ../detail/faq 
+
+	.stub 
+	include ../../blocks/footer 

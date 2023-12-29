@@ -56,6 +56,22 @@ $icoOffset: 8px
 		background-size: 32px
 	&:hover
 		color: $blueColor
+.btn-download
+	border-color: $blueColor
+	background: none
+	color: $blueColor
+	width: auto
+	span
+		vertical-align: middle
+	i
+		@include icoEl(18px, 18px, "../images/icons/download-blue.svg", middle, cover)
+		margin-left: 8px
+	&:hover
+		background-color: $blueColor
+		color: $whiteColor
+		border-color: $blueColor
+		i
+			@include bgImageEl("../images/icons/download-white.svg")
 // .video-btn
 // 	cursor: pointer
 // 	span

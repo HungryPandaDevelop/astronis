@@ -4,11 +4,38 @@ let defaultSlider = $('.default-slider');
 
 defaultSlider.lightSlider({
   item: 1,
+
   loop: false,
   slideMove: 1,
   easing: 'cubic-bezier(0.25, 0, 0.25, 1)',
   speed: 600,
   addClass: 'default-slider-light',
+  // adaptiveHeight: true,
+
+});
+
+let solutionSlider = $('.solution-slider');
+
+solutionSlider.lightSlider({
+  item: 1,
+  pager: false,
+  slideMove: 1,
+  easing: 'cubic-bezier(0.25, 0, 0.25, 1)',
+  speed: 600,
+  addClass: 'solution-slider-light',
+  // adaptiveHeight: true,
+
+});
+
+let projectsDetail = $('.projects-slider-detail');
+
+projectsDetail.lightSlider({
+  item: 1,
+  pager: false,
+  slideMove: 1,
+  easing: 'cubic-bezier(0.25, 0, 0.25, 1)',
+  speed: 600,
+  addClass: 'projects-detail-light',
   // adaptiveHeight: true,
 
 });

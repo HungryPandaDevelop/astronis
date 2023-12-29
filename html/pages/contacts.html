@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+  <!-- head start-->
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/css/ion.rangeSlider.css" type="text/css" rel="stylesheet">
+    <link href="/css/lightslider.css" type="text/css" rel="stylesheet">
+    <link href="/css/air-datepicker.css" type="text/css" rel="stylesheet">
+    <link href="/fonts/stylesheet.css" type="text/css" rel="stylesheet">
+    <link href="/style.css" type="text/css" rel="stylesheet">
+    <script src="/js/jquery-3.6.0.min.js"></script>
+    <script src="/js/air-datepicker.js"></script>
+    <script src="/js/ion.rangeSlider.js"></script>
+    <script src="/js/jquery.mask.js"></script>
+    <script src="/js/lightslider.js"></script>
+    <script src="/js/three.js"></script>
+    <script src="/js/sphere.js"></script>
+    <script src="/common-dist.js"> </script>
+  </head>
+  <!-- range slider-->
+  <!-- calendar input-->
+  <!-- head end-->
+  <body> 
+    <!-- popup end -->
+    <!-- popup end -->
+      <div class="popup element-show" data-element="1">
+        <div class="popup-overlay popup-overlay-js"></div>
+        <div class="popup-container"> 
+          <div class="close-btn close-btn--popup close-js"></div> 
+          <div></div>
+        </div>
+      </div>
+      <div class="popup element-show menu-hamburger" data-element="1">
+        <div class="popup-overlay popup-overlay-js"></div>
+        <div class="popup-container"> 
+          <div class="close-btn close-btn--popup close-js"></div>
+          <div class="menu-mobile-bg-container">
+            <div class="menu-mobile-bg"></div>
+          </div>
+          <div class="main-full">
+            <div class="popup-nav-container">
+              <div class="popup-nav">
+                <nav>
+                  <ul class="ln">
+                    <li> <a href="#">О нас</a></li>
+                    <li> <a href="#">Услуги</a></li>
+                    <li> <a href="#">Решения</a></li>
+                    <li> <a href="#">Проекты</a></li>
+                    <li> <a href="#">Партнеры</a></li>
+                    <li> <a href="#">Новости</a></li>
+                    <li> <a href="#">Контакты</a></li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    <header>
+      <div class="main-grid">
+        <div class="col-6 logo-container vertical-align"><a class="logo" href="#"> <img src="/images/logo.svg" alt=""></a></div>
+        <div class="col-6 vertical-align">
+          <div class="hamburger">
+            <div class="h-line-box">
+              <div class="h-line h-line-1"></div>
+              <div class="h-line h-line-2"></div>
+              <div class="h-line h-line-3"></div>
+              <div class="h-line h-line-4"></div>
+              <div class="h-line h-line-5"></div>
+              <div class="h-line h-line-6"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="stub"></div>
+    <div class="content">
+      <div class="main-full">
+        <h1>Контакты</h1>
+      </div>
+      <div class="content">
+        <div class="main-grid contacts-section">
+          <div class="col-6">
+            <div class="map-container">
+              <div class="address-for-map">
+                <div class="contacts-address-line" id="address-0" data-coord-x="55.6" data-coord-y="37.6" data-index="0" data-address="+7 (499) 938-83-51" data-text-address="м. Китай-город, Лубянский пр., 15, стр. 4"></div>
+              </div>
+              <div class="map-home">
+                <div id="map" data-marker="/images/icons/marker-black.svg"></div>
+              </div>
+              <script src="https://api-maps.yandex.ru/2.1/?lang=ru-RU&amp;amp;apikey=AAyE0FsBAAAApZ_zfwIA_dXSEkWE4_EY3eJc0MxKY2DPitcAAAAAAAAAAADTxJqFLJMxqfrjbNVz6ghuLNJ4tw" type="text/javascript"></script>
+              <script src="/js/map.js"></script>
+            </div>
+            <div class="contacts-hint"> 
+              <ul class="ln">
+                <li>Москва, Очаковское шоссе, 34, бизнес-центр West Park</li>
+                <li> <a class="phone-btn" href="#"> <i> </i><span>+7 (495) 120-111-5</span></a></li>
+                <li><a class="mail-btn" href="#"><i> </i><span>info@astronis.ru</span></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-6">
+            <h2>Как до нас добраться</h2>
+            <div class="contacts-item">
+              <h3>На общественном транспорте</h3>
+              <p>От станции метро Кунцевская. Выход к остановке Автобуса №11. Доехать до остановки Очаковское ш. 16. Далее пройти пешком 10 минут по Очаковскому шоссе.</p>
+              <p>От платформы Очаково. Выход к проезду Стройкомбината, далее пешком 15 мин. по Вокзальной улице.</p>
+            </div>
+            <div class="contacts-item">
+              <h3>На машине</h3>
+              <p>К бизнес-центру ведут удобные подъездные пути с Мичуринского проспекта, Аминьевского шоссе и МКАД.На территории БЦ есть парковка.</p>
+              <p>После въезда на территорию БЦ двигайтесь прямо справа будет вход здание.</p>
+            </div>
+          </div>
+        </div>
+        <div class="faq-container">
+          <div class="main-full">
+            <div class="faq-button"><i></i>
+              <div class="faq-button-inner">
+                <div class="faq-button-title">Задать вопрос</div>
+                <div class="faq-button-text">Мы проконсультируем вас по всем интересущим вопросам.</div>
+              </div>
+            </div>
+            <div class="faq-button"><i></i>
+              <div class="faq-button-inner">
+                <div class="faq-button-title">Заказать услугу</div>
+                <div class="faq-button-text">Свяжитесь с нашим менеджером для оформления услуги.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="stub"> </div>
+    <footer>
+      <div class="main-grid">
+        <div class="col-2 hidden-xs"></div>
+        <div class="col-10 col-xs-12 logo-container"><a class="logo" href="./index.html"><img src="/images/logo.svg" alt=""></a></div>
+        <div class="col-2 hidden-xs"></div>
+        <div class="col-3 col-xs-5">
+          <div class="nav">
+            <ul>
+              <li> <a href="#"> Услуги</a></li>
+              <li> <a href="#"> Партнеры</a></li>
+              <li> <a href="#"> Проекты</a></li>
+              <li> <a href="#"> Новости</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-3 col-xs-7">
+          <div class="nav">
+            <ul>
+              <li> <a href="#"> О компании</a></li>
+              <li> <a href="#"> Краткая справка компании</a></li>
+              <li> <a href="#"> Карточка организации</a></li>
+              <li> <a href="#"> Лицензии</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-4 col-xs-12 feedback">
+          <div class="feedback-footer-item"><a class="marker-btn" href="#"> <span>Москва, Очаковское шоссе, 34, бизнес-центр West Park</span></a></div>
+          <div class="feedback-footer-item"><a class="mail-btn" href="#"><i></i><span>info@astronis.ru</span></a></div>
+          <div class="feedback-footer-item"><a class="phone-btn" href="#"> <i></i><span>+7 (495) 120-111-5</span></a></div>
+        </div>
+        <div class="col-2 hidden-xs"></div>
+        <div class="col-10">
+          <ul class="footer-links">
+            <li><a href="#">Условия обработки персональных данных и политика конфиденциальности</a></li>
+            <li><a href="#">Разработка сайта Style You</a></li>
+            <li>© Astronis, 2023</li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
