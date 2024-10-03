@@ -4,9 +4,13 @@ footer
 
   background-color: $blackColor
   color: $whiteColor
-
+  .logo-container
+    margin-bottom: 15px
+  .logo img
+    width: 140px
   .main-grid
     padding: 0px 15px 30px
+    gap: 0
   ul,li
     list-style: none
     padding: 0
@@ -24,24 +28,35 @@ footer
 
   .nav
     font-size: $standartSize
-    margin-bottom: 50px
+    margin-bottom: 40px
     li
       margin-bottom: 12px
 .footer-links
   font-size: 12px
 .feedback-footer-item
-
-  margin: 0 0 15px
+  margin: 0 0 4px
   font-size: 14px
   text-align: right
   i
     margin-right: 10px
-
+.footer-stub
+  height: 90px
 @media (max-width: 576px)
   .feedback-footer-item
     text-align: left
   footer
     .nav
       font-size: 14px
+      margin-bottom: 20px
     .footer-links
       display: block
+    .main-grid
+      gap: 0
+    .logo-container
+      margin-bottom: 23px
+    .feedback
+      margin-bottom: 30px
+  .feedback-footer-address
+    font-size: 12px
+  .footer-stub
+    height: 45px

@@ -1,4 +1,8 @@
 .news
+  .animate-treagle-box
+    left: 200px
+    top: 100px
+    transform: scale(1.2)
   .btn-section-container
     // position: relative
     // z-index: 3
@@ -23,6 +27,9 @@
   .lSAction
     width: 120%
     left: -80px
+.news-item-text
+  p
+    margin: 0
 .stub-slider
   width: 75vw
   position: relative
@@ -31,3 +38,12 @@
   // background: red
   .news-slider-container
     max-width: 1020px
+@media (max-width: 576px)
+  .stub-slider
+    width: 100%
+  .news
+    .main-grid
+      padding-right: 0
+  .news-slider-container
+    .lSSlideWrapper
+      width: 80%

@@ -8,7 +8,7 @@
   gap: 0
   padding: 0
   h3
-    font-size: 32px
+    font-size: 27px
     line-height: 1.2
     color: $whiteColor
     margin: 15px 0
@@ -18,12 +18,44 @@
   height: 100%
 
 .projects-line-content
-  padding: 30px
-  height: 400px
+  padding: 5px 30px 15px
+  height: 250px
   position: relative
   display: flex
   background: linear-gradient(139deg, #37AAE1 15.61%, #0083C2 86.9%)
   img
+    width: 50%
     max-width: 400px
 .projects-line-inner
   margin: auto 0
+
+.projects-img-wrapper-mob
+  display: none
+@media (max-width: 1320px)
+  .projects-line
+    padding: 0 15px
+@media (max-width: 820px)
+  .projects-line h3
+    font-size: 21px
+@media (max-width: 576px)
+  .projects-line
+    margin-left: 15px
+    width: calc( 100% - 30px )
+    padding: 0
+    // border-radius: 0 15px 0 15px
+  .projects-line-content
+    height: 280px
+    padding: 15px
+    h3
+      font-size: 21px
+    img
+      max-width: 160px
+  .projects-img-container
+    position: relative
+    height: 200px
+  .projects-img-wrapper
+    grid-row: 1/span 1
+  .projects-img-wrapper-desk
+    display: none
+  .projects-img-wrapper-mob
+    display: block

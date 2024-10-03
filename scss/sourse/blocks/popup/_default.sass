@@ -1,38 +1,54 @@
 
 .popup
-  @include positionElement(100%, 100%, 0, 0, left, top, 5, fixed, flex)
+  @include positionElement(100%, 100%, 0, 0, left, top, 7, fixed, flex)
   transition: ease-out 0.5s
   opacity: 0
   visibility: hidden
   &.show
     opacity: 1
     visibility: visible
-  h3,h4
-    color: inherit
+  h2, h3,h4
+    color: $whiteColor
     text-align: center
-
+    font-weight: 300
+    font-size: 32px
+  h2
+    margin-bottom: 10px
   .btn
-    width: 100%
-
+    width: 240px
+  .form-btn-container
+    text-align: center
+  .main-grid
+    gap: 8px
 .popup-overlay
   @include positionElement(100%, 100%, 0, 0)
   background-color: $blueColor
   opacity: 0.3
 
-.close-btn--popup
+.close-btn
   position: absolute
   right: 0
   top: 0
-  margin: 15px
-
+  margin: 30px
+  z-index: 4
 .popup-container
   position: relative
-  background-color: $whiteColor
-  max-width: 600px
+  // background-color: $whiteColor
+  border-radius: 0px 50px
+  background: linear-gradient(152deg, #37AAE1 8.96%, #0083C2 92.62%)
+  max-width: 1060px
   width: 100%
   height: auto
   margin: auto
-  padding: 90px 30px
+  padding: 30px
   transition: ease-out 0.5s
   overflow-y: auto
   max-height: 100%
+
+@media (max-width: 576px)
+  .popup-container
+    padding: 15px
+    border-radius: 0
+  .popup
+    .main-grid
+      padding: 0

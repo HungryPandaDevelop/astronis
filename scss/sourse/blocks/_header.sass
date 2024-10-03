@@ -1,6 +1,6 @@
 
 .stub
-  height: 70px
+  height: 92px
 
 header
   @include positionElement(100%, auto, 0, auto, left, top, 6, fixed )
@@ -21,7 +21,7 @@ header
 .logo
   img
     transition: ease-out 0.25s
-    width: 140px
+    width: 190px
     object-fit: cover
 
 .nav-header
@@ -175,3 +175,6 @@ header
 .hamburger.active .h-line-6
   -webkit-transition-delay: 0.5s
   background: $blueColor
+.hamburger.active
+  .h-line-box
+    top: 10px

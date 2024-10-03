@@ -25,7 +25,7 @@
 .marker-ico
   @include icoEl(20px, 16px, '../images/icons/marker-black.svg')
 .date-ico
-  @include icoEl(20px, 16px, '../images/icons/calendar-black.svg', text-top)
+  @include icoEl(22px, 22px, '../images/icons/calendar-white.svg', text-top)
   margin-right: 8px
 .view-ico
   @include icoEl(20px, 16px, '../images/icons/view-black.svg', text-top)
@@ -33,3 +33,28 @@
 .rewiews-ico
   @include icoEl(20px, 16px, '../images/icons/rew-black.svg', text-top)
   margin-right: 8px
+.animate-treagle-box
+  @include positionElement(500px,500px,0px,0px)
+  overflow: hidden
+.animate-treagle-shadow
+  @include positionElement(100%,100%,0px,0px,left,top,2)
+  background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%)
+.animate-treagle
+  @include positionElement(270px,400px,110px,50px)
+  @include bgImageEl("../images/triangle.svg")
+  animation: moveCircle 70s linear infinite
+.animate-treagle-box-2
+  left: auto
+  right: 100px
+  top: 500px
+  transform: scale(1.2)
+  .animate-treagle
+    animation-duration: 50s
+@keyframes moveCircle
+  0%
+    transform: translate(0px, 0)
+  100%
+    transform: translate(0px, 0) rotate(360deg)
+@media (max-width: 576px)
+  .animate-treagle-box
+    width: 100%

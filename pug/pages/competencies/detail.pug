@@ -1,31 +1,29 @@
 include ../../default/build-header
+	include ../../blocks/popups
 	include ../../blocks/header
 	.stub
-	//- +roofContent("Lorem impusm")
-	.main-full
-		+breadcrumbs('Link')
-		h1 Site is started
-	include ../detail/roof.pug
-	
-	.main-grid.news-main
-		.col-6
-			.default-thumb-container
-				.thumb-slider
-					-for (x=0; x<10;x++)
-						li.default-slider-item(data-thumb="/images/temp/1.jpg" data-src="/images/temp/1.jpg")
-							img(src="/images/temp/1.jpg",  alt="")
-		.col-6
-			p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam molestias sunt similique eveniet! Quos eius doloremque mollitia, id magnam error obcaecati iste sequi commodi enim rem illo. Modi, possimus itaque!
-			.detail-links
-				.tags
-					a.tag(href="#") News 
-					a.tag(href="#") Last 
-					a.tag(href="#") Custom 
-				.social 
-					+social(["v","y","g","tl","i","wz","fc",])
-	include ../detail/tabs.pug
-	include ../detail/news-last.pug
-	include ../detail/reviews.pug 
-	include ../detail/comments.pug 
-	.stub
-	include ../../blocks/footer
+	.content
+		.main-full
+			h1 Прикладное и системное программное обеспечение
+		.main-content 
+			.main-full
+					.content-text 
+						p. 
+							Для предприятий или компаний, деятельность или организация бизнес-процессов которых не может быть обеспечена функционалом доступных на рынке программных решений, компания «Астронис» готова предложить разработку уникального программного обеспечения, спроектированного для решения конкретных задач.
+						p.
+							При создании информационных систем и систем управления отдельными видами деятельности может быть предусмотрено использование в качестве пользовательских терминалов как привычных ПК и ноутбуков, так и мобильных устройств. Для решения отдельных задач в состав программно-аппаратного комплекса могут быть включены дополнительные необходимые устройства – считыватели, датчики и принтеры.
+						p.
+							Мы заинтересованы в удобстве и эффективности использования разработанного нами ПО, именно поэтому его проектирование основывается на серьезном анализе действующих или планируемых бизнес-процессов для их оптимизации и автоматизации.
+
+		.projects-slider-detail
+			-for (let i=0;i<3;i++)
+				.projects-slider-item 
+					.projects-slider-img.img-cover 
+						img(src="/images/serv-4.jpg", alt="")
+					.main-grid 
+						.col-5.projects-slider-col
+							.projects-slider-info Защищенный центр обработки данных ПАО «Газпром»
+	include ../detail/faq 
+
+	.stub 
+	include ../../blocks/footer 

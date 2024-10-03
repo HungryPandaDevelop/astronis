@@ -1,38 +1,106 @@
 
 .main-content-img
-  position: absolute
-  left: 70%
-  top: 0
-  right: 0
-  height: 100%
-  border-radius: 50px 0 50px 0
-  overflow: hidden
+	position: absolute
+	left: 70%
+	top: 0
+	right: 0
+	height: 100%
+	border-radius: 50px 0 50px 0
+	overflow: hidden
+.point-stub
+	height: 45px
 .services-line
-  position: relative
-  margin-bottom: 45px
+	position: relative
+	overflow: hidden
+	// margin-bottom: 45px
+.services-line-content-inner
+	position: relative
+	z-index: 1
 .services-line-content
-  // position: relative
-  padding: 45px 60px 45px 90px
-  margin-left: -90px
-  background: linear-gradient(135deg, #37AAE1 18.64%, #0083C2 77.14%)
-  box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.25)
-  h3
-    color: inherit
-    margin-bottom: 30px
+	position: relative
+	padding: 45px 60px 45px 90px
+	margin-left: -90px
+
+	h3
+		color: inherit
+		margin-bottom: 30px
+	&:after
+		content: ''
+		@include positionElement(200%, 100%,0 ,0)
+		background: linear-gradient(135deg, #37AAE1 18.64%, #0083C2 77.14%)
+		box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.25)
+.services-line-right
+	h3
+		background: $gradientMain
+		-webkit-background-clip: text
+		-webkit-text-fill-color: transparent
 .services-line-container
-  position: relative
-  height: 100%
+	position: relative
+	height: 100%
 
 .services-line-img
-  position: absolute
-  width: 100%
-  left: 0
-  top: 50px
-  bottom: 50px
-  border-radius: 0 50px 0 50px
-  overflow: hidden
+	position: absolute
+	width: 100%
+	left: 0
+	top: 50px
+	bottom: 50px
+	border-radius: 0 50px 0 50px
+	overflow: hidden
+	z-index: 1
 .services-line-right
-  .services-line-content
-    background: none
-    h3
-      color: $blueColor
+	.services-line-content
+		background: none
+		&:after
+			display: none
+		h3
+			color: $blueColor
+
+.services-line-img-mob
+	display: none
+@media (max-width: 820px)
+	.main-content-img
+		left: 60%
+	.services-line-img
+		width: 130%
+		left: auto
+		top: 50px
+		right: 0
+		bottom: auto
+		height: 340px
+
+@media (max-width: 576px)
+	.main-content-img
+		position: relative
+		left: 0
+		width: 100%
+		height: 300px
+		margin-top: 30px
+		display: none
+	.services-line-content
+		margin-left: 0
+		padding: 40px 15px 30px
+	.services-line-content
+		h3
+			font-size: 16px
+			padding-right: 150px
+			height: 90px
+	.services-line-img
+		width: 150px
+		height: 150px
+		left: auto
+		top: 10px
+		bottom: 50px
+		border-radius: 0 15px 0 15px
+		z-index: 2
+		right: 0
+	.services-line-img-mob
+		display: block
+	.services-line-cell-right
+		grid-row: 1
+		.services-line-img
+			left: 0
+			right: auto
+	.services-line-right
+		h3
+			padding-right: 0
+			padding-left: 150px

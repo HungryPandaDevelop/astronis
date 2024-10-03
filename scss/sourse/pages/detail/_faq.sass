@@ -1,21 +1,31 @@
 .faq-container
-	padding-top: 25%
-	@include bgImageEl("../images/faq.jpg",cover)
+	// padding-top: 25%
+	// @include bgImageEl("../images/faq.jpg",cover)
+	margin-top: 45px
+	a
+		text-decoration: none
+	.main-full
+		display: flex
+	.btn-container
+		margin-top: auto
+		margin-left: auto
+		.more-btn
+			margin-left: 30px
 .faq-button
 	display: inline-flex
-	margin: 0 30px 30px 0
+	margin: 0 30px 0px 0
 	position: relative
-
+	text-decoration: none
 	padding: 30px
 	width: 440px
-	height: 440px
+	height: 210px
 	border-radius: 0 50px
 	background: linear-gradient(135deg, #37AAE1 18.64%, #0083C2 77.14%)
 	box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.25)
 	i
 		position: absolute
-		width: 80px
-		height: 80px
+		width: 40px
+		height: 40px
 		right: 0
 		top: 0
 		margin: 30px
@@ -27,3 +37,49 @@
 .faq-button-inner
 	height: auto
 	margin-top: auto
+@media (max-width: 992px)
+	.faq-button
+		width: 45%
+		height: 260px
+@media (max-width: 820px)
+	.faq-button
+		height: 160px
+		width: 35%
+		padding: 15px
+		margin: 0
+		border-radius: 0 20px 0 20px
+
+	.faq-button i
+		width: 30px
+		height: 30px
+
+	.faq-button-title
+		font-size: 21px
+	.faq-button-text
+		font-size: 14px
+	.faq-container .btn-container
+		font-size: 14px
+@media (max-width: 576px)
+	.faq-button
+		width: 100%
+		height: auto
+		padding-top: 70px
+		margin-bottom: 30px
+		margin: 0 0 30px
+
+		i
+			width: 40px
+			height: 40px
+	.faq-container
+		.main-full
+			display: block
+		.faq-button-second
+			margin: 0
+		.more-btn
+			margin-top: 30px
+	.faq-container
+		.btn-container
+			text-align: center
+		.more-btn--prev
+			margin-left: -50px
+			display: block

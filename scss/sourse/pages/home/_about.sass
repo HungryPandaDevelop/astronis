@@ -1,9 +1,11 @@
 .about-section
   height: 750px
+  padding: 30px 0 0
   position: relative
   overflow: hidden
   .about-text
     // padding-top: 90px
+    font-size: 21px
     a
       text-decoration: none
       color: $blueColor
@@ -12,13 +14,28 @@
   .btn-container
     padding-top: 90px
     text-align: right
-.about-img
+  .animate-treagle-box
+    left: auto
+    top: auto
+    right: 380px
+    bottom: -40px
+    z-index: 0
+.about-img-2
   position: absolute
   left: 70%
-  right: 0
-  height: 100%
-  top: 0
-  height: 720px
+  top: 100px
+  width: 400px
+  height: 600px
+  border-radius: 0 50px 0 50px
+  overflow: hidden
+.about-img-1
+  position: absolute
+  left: calc(70% + 100px)
+  top: 0px
+  width: 400px
+  height: 600px
+  border-radius: 0 50px 0 50px
+  overflow: hidden
   // display: none
 .sphere
   position: absolute
@@ -30,16 +47,30 @@
 .about-container
   position: relative
   z-index: 2
+
 @media (max-width: 1280px)
   .about-section
     height: 550px
-  .about-img
-    height: 470px
+  // .about-img
+  //   height: 470px
   .sphere
     width: 1000px
     height: 600px
+@media (max-width: 820px)
+  .about-section .about-text
+    font-size: 14px
+  .about-img-1
+    left: calc(71% + 20px)
+    width: 210px
+    height: 300px
+
+  .about-img-2
+    width: 230px
+    height: 430px
+
 @media (max-width: 576px)
-  .about-img
+  .about-img-1,
+  .about-img-2
     display: none
   .about-section
     height: auto

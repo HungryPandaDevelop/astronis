@@ -1,12 +1,49 @@
 .main-content
-  position: relative
-  margin-bottom: 120px
-  p
-    margin-top: 0
-    margin-bottom: 30px
+	position: relative
+	margin-bottom: 120px
+	p
+		margin-top: 0
+		margin-bottom: 30px
+	img
+		max-width: 100%
 .content-text
-  font-size: 28px
-  color: $blueColor
-  margin: 0 0 30px
+	font-size: 24px
+	color: $blueColor
+	margin: 0 0 30px
+
+	background: $gradientMain
+	-webkit-background-clip: text
+	-webkit-text-fill-color: transparent
 .content-text-2
-  font-size: 20px
+	font-size: 20px
+
+.sorting-container
+	text-align: right
+	.custom-select
+		color: $blueColor
+		width: auto
+		display: inline-block
+	span
+		padding-right: 30px
+	ul
+		font-size: 14px
+	i
+		background-image: url("../images/arrows/carret-down-blue.svg")
+
+.content
+	.aligncenter
+		display: block
+		margin: auto
+
+	.alignleft
+		float: left
+		margin-right: 30px
+	.alignright
+		float: right
+		margin-left: 30px
+@media (max-width: 576px)
+	.content-text,
+	.content-text-2
+		font-size: 18px
+	.main-content
+		margin-bottom: 60px

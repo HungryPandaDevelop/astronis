@@ -32,6 +32,7 @@ let projectsDetail = $('.projects-slider-detail');
 projectsDetail.lightSlider({
   item: 1,
   pager: false,
+  // controls: true,
   slideMove: 1,
   easing: 'cubic-bezier(0.25, 0, 0.25, 1)',
   speed: 600,
@@ -45,11 +46,21 @@ let serviceSlider = $('.service-slider');
 serviceSlider.lightSlider({
   item: 1,
   loop: true,
-  controls: false,
+  controls: true,
+  pager: false,
   slideMove: 1,
   easing: 'cubic-bezier(0.25, 0, 0.25, 1)',
-  speed: 600,
+  speed: 750,
   addClass: 'service-slider-light',
+  responsive: [
+    {
+      breakpoint: 576,
+      settings: {
+        item: 1,
+        slideMargin: 30,
+      }
+    },
+  ]
   // adaptiveHeight: true,
   // onSliderLoad: function (el) {
   //   $(el).find('.service-item').removeClass('show').eq(multySlider.getCurrentSlideCount()).addClass('show')
@@ -63,16 +74,32 @@ let projectsSlider = $('.projects-slider');
 
 projectsSlider.lightSlider({
   item: 1,
-  loop: false,
-  controls: false,
+  loop: true,
+  controls: true,
+  pager: false,
   slideMove: 1,
   easing: 'cubic-bezier(0.25, 0, 0.25, 1)',
   speed: 600,
+  galleryMargin: 60,
+  slideMargin: 30,
   addClass: 'project-slider-light',
+  responsive: [
+    {
+      breakpoint: 576,
+      settings: {
+        item: 1,
+        slideMargin: 30,
+      }
+    },
+  ]
   // adaptiveHeight: true,
 
 });
 
+$('.prev-project').on('click', function (e) {
+  e.preventDefault();
+  projectsSlider.goToPrevSlide();
+});
 $('.next-project').on('click', function (e) {
   e.preventDefault();
   projectsSlider.goToNextSlide();
@@ -82,14 +109,15 @@ let solutionsSlider = $('.solutions-slider');
 
 solutionsSlider.lightSlider({
   item: 1,
-  loop: false,
-  controls: false,
+  loop: true,
+  controls: true,
+  pager: false,
   slideMove: 1,
   easing: 'cubic-bezier(0.25, 0, 0.25, 1)',
   speed: 600,
   addClass: 'solutions-slider-light',
-  // adaptiveHeight: true,
-
+  adaptiveHeight: true,
+  slideMargin: 30
 });
 
 
@@ -146,6 +174,16 @@ multySlider.lightSlider({
         item: 2,
         // controls: true,
         enableDrag: false,
+        slideMargin: 30,
+      }
+    },
+    {
+      breakpoint: 820,
+      settings: {
+        item: 2,
+        // controls:false,
+        enableDrag: true,
+        slideMargin: 15,
       }
     },
     {
@@ -154,6 +192,7 @@ multySlider.lightSlider({
         item: 1,
         // controls:false,
         enableDrag: true,
+        slideMargin: 15,
       }
     }
   ],
@@ -491,7 +530,7 @@ $('.custom-select').on('click', 'li', function () {
 $('.close-js').on('click', function () {
     $(this).parents('.element-show').removeClass('show');
 });
-$('.popup-overlay-js').on('click',function(e){
+$('.popup-overlay-js').on('click', function (e) {
     $(this).parents('.element-show').removeClass('show');
 });
 
@@ -501,15 +540,15 @@ $(document).on('keyup', (evt) => {
     }
 });
 
-$('body').on('click','.element-btn', function (e) {
+$('body').on('click', '.element-btn', function (e) {
     e.preventDefault();
-    
+
     $('.element-show').removeClass('show');
     let activeIndex = $(this).attr('data-element');
-  
+    console.log("cl", activeIndex)
     $('[data-element="' + activeIndex + '"].element-show').addClass('show');
 
-    
+
 });
 $('.password-field').on('click','i',changeStatePass);
 let visibility = true;
@@ -536,16 +575,30 @@ window.addEventListener('scroll', function (e) {
 
   st = $(this).scrollTop();
 
-  if(st > 0){
+  if (st > 0) {
     $('header').addClass('stick');
   }
-  else{
+  else {
     $('header').removeClass('stick');
   }
 
-});   
+});
+
+$('.scroll-home').on('click', function () {
+  $('html, body').animate({ scrollTop: $('.about-section').offset().top - 100 + 'px' });
+});
 
 
+$('.competencies-item').mousemove(function (event) {
+
+  let curX = (event.offsetX - 42);
+  let curY = (event.offsetY - 42);
+
+  $(this).find('.btn-item-plus').css({
+    left: (curX) + 'px',
+    top: (curY) + 'px'
+  });
+});
 
 
 // $(window).on('load',function(){
@@ -570,12 +623,12 @@ window.addEventListener('scroll', function (e) {
 
 
 /*faq*/
-$('.faq-head').on('click',function(){
+$('.faq-head').on('click', function () {
   $(this).parent().toggleClass('faq-item--active');
 });
 /*faq*/
 
-$('.hamburger').on('click',function(){
+$('.hamburger').on('click', function () {
   $(this).toggleClass('active');
 
   $('.menu-hamburger').toggleClass('show')
@@ -588,33 +641,33 @@ function calculatePercentage(value, maxValue) {
   return Math.floor((value / maxValue) * 100);
 }
 let lengthEl = 10;
-for(let i=1; i<lengthEl; i++){
+for (let i = 1; i < lengthEl; i++) {
   $('.animate-line-box, .animate-line-box-2').append(`
   <div 
     class="animate-line"
-    data-top="${calculatePercentage(i,lengthEl)}"/>
-  `)  
+    data-top="${calculatePercentage(i, lengthEl)}"/>
+  `)
 }
 
 $('.animate-line-box').append(`
   <div 
     class="animate-line-topic"
-    data-top="${lengthEl/2}"><span></span>
+    data-top="${lengthEl / 2}"><span></span>
   `);
 
 const animateLines = $('.animate-line-box').find('.animate-line');
 
-setTimeout(()=>{
+setTimeout(() => {
 
   const delayStep = 0.25;
   animateLines.addClass('transition')
-  animateLines.each(function(index){
+  animateLines.each(function (index) {
     let top = $(this).data('top');
     let delayTr = (animateLines.length - 1 - index) * delayStep;
-    $(this).css({top: top+'%', 'transitionDuration': delayTr+'s'});
+    $(this).css({ top: top + '%', 'transitionDuration': delayTr + 's' });
   });
-  
-},1);
+
+}, 1);
 
 // setTimeout(()=>{
 
@@ -633,23 +686,23 @@ setTimeout(()=>{
 
 const animateLinesSec = $('.animate-line-box-2').find('.animate-line');
 
-const startStroke = (time)=>{
+const startStroke = (time) => {
   let delayTime = time;
 
-  const delayStep = delayTime/ animateLines.length;
-  
-  animateLinesSec.each(function(index){
+  const delayStep = delayTime / animateLines.length;
+
+  animateLinesSec.each(function (index) {
 
     let delayTr = (animateLines.length - 1 - index) * delayStep;
-  
-    $(this).css({'animationDuration': delayTime+'s','animationDelay': delayTr+'s'});
+
+    $(this).css({ 'animationDuration': delayTime + 's', 'animationDelay': delayTr + 's' });
   });
 }
 
 // setTimeout(()=>{
 
 //   startStroke(50);
-  
+
 // },1);
 
 
@@ -662,43 +715,43 @@ const startStroke = (time)=>{
 // },2000);
 
 
-$(window).on('wheel', function(event) {
+$(window).on('wheel', function (event) {
   if (event.originalEvent.deltaY > 0) {
-      // Прокрутка вниз
-      animateLines.removeClass('transition animate-up').addClass('animate-down')
+    // Прокрутка вниз
+    animateLines.removeClass('transition animate-up').addClass('animate-down')
   } else {
-      // Прокрутка вверх
-      // animateLines.removeClass('transition animate-down').addClass('animate-up')
+    // Прокрутка вверх
+    // animateLines.removeClass('transition animate-down').addClass('animate-up')
   }
   // event.preventDefault();
 });
 
 
 
-let section  = $('.animate-section');
-let activeSectionIndex = -1; 
+let section = $('.animate-section');
+let activeSectionIndex = -1;
 
 let homeHeight = $('.main-home').height();
 
-$(window).on('scroll', function() {
+$(window).on('scroll', function () {
   let st = $(this).scrollTop();
 
 
-    section.each(function(index) {
-      let sectionElement = section.eq(index);
-      let sectionTop = sectionElement.offset().top;
-      let sectionHeight = sectionElement.height();
-  
-      if (sectionTop <= st && st < sectionTop + sectionHeight) {
-        if (activeSectionIndex !== index) {
-          if (activeSectionIndex === -1){
-          
-          }
-          activeSectionIndex = index;
+  section.each(function (index) {
+    let sectionElement = section.eq(index);
+    let sectionTop = sectionElement.offset().top;
+    let sectionHeight = sectionElement.height();
+
+    if (sectionTop <= st && st < sectionTop + sectionHeight) {
+      if (activeSectionIndex !== index) {
+        if (activeSectionIndex === -1) {
 
         }
+        activeSectionIndex = index;
+
       }
-    });
+    }
+  });
 
 
 });

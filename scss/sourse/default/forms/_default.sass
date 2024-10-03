@@ -6,7 +6,7 @@ input
 .input-decorate,
 .custom-select,
 .file-decorate
-	padding: 15px
+	padding: 7px 15px
 	border: 0
 	font-family: inherit
 	font-size: $standartSize
@@ -14,15 +14,17 @@ input
 	resize: none
 	width: 100%
 	background: none
-	color: $blackColor
-	border: 1px solid $blackColor
+	color: $whiteColor
+	border: 1px solid $whiteColor
+	border-radius: 15px
 	transition: ease-out 0.5s
 	&:focus
-		outline: 0
-		border-color: $goldColor
-	&::placeholder
-		color: $blackColor
+		outline: 1px solid $whiteColor
 
+	&::placeholder
+		color: rgba( $whiteColor ,0.5 )
+textarea
+	height: 150px
 .input-search
 	font-size: $smallSize
 	background-color: $whiteColorSecond
@@ -49,7 +51,9 @@ input
 
 .input-box
 	margin: 0 0 15px
-
+	label
+		display: block
+		margin-bottom: 8px
 .agreement-box
 	text-align: right
 	.wpcf7-acceptance

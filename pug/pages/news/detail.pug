@@ -9,23 +9,14 @@ include ../../default/build-header
 	
 	.main-grid.news-main
 		.col-6
-			.default-thumb-container
-				.thumb-slider
-					-for (x=0; x<10;x++)
-						li.default-slider-item(data-thumb="/images/temp/1.jpg" data-src="/images/temp/1.jpg")
-							img(src="/images/temp/1.jpg",  alt="")
+			.news-main-img
+				img(src="/images/temp/1.jpg",  alt="")
 		.col-6
+			.detail-date
+				i.date-ico
+				span 10/10/2024
 			p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam molestias sunt similique eveniet! Quos eius doloremque mollitia, id magnam error obcaecati iste sequi commodi enim rem illo. Modi, possimus itaque!
-			.detail-links
-				.tags
-					a.tag(href="#") News 
-					a.tag(href="#") Last 
-					a.tag(href="#") Custom 
-				.social 
-					+social(["v","y","g","tl","i","wz","fc",])
-	include ../detail/tabs.pug
-	include ../detail/news-last.pug
-	include ../detail/reviews.pug 
-	include ../detail/comments.pug 
+
+
 	.stub
 	include ../../blocks/footer

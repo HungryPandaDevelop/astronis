@@ -30,6 +30,7 @@ let projectsDetail = $('.projects-slider-detail');
 projectsDetail.lightSlider({
   item: 1,
   pager: false,
+  // controls: true,
   slideMove: 1,
   easing: 'cubic-bezier(0.25, 0, 0.25, 1)',
   speed: 600,
@@ -43,11 +44,21 @@ let serviceSlider = $('.service-slider');
 serviceSlider.lightSlider({
   item: 1,
   loop: true,
-  controls: false,
+  controls: true,
+  pager: false,
   slideMove: 1,
   easing: 'cubic-bezier(0.25, 0, 0.25, 1)',
-  speed: 600,
+  speed: 750,
   addClass: 'service-slider-light',
+  responsive: [
+    {
+      breakpoint: 576,
+      settings: {
+        item: 1,
+        slideMargin: 30,
+      }
+    },
+  ]
   // adaptiveHeight: true,
   // onSliderLoad: function (el) {
   //   $(el).find('.service-item').removeClass('show').eq(multySlider.getCurrentSlideCount()).addClass('show')
@@ -61,16 +72,32 @@ let projectsSlider = $('.projects-slider');
 
 projectsSlider.lightSlider({
   item: 1,
-  loop: false,
-  controls: false,
+  loop: true,
+  controls: true,
+  pager: false,
   slideMove: 1,
   easing: 'cubic-bezier(0.25, 0, 0.25, 1)',
   speed: 600,
+  galleryMargin: 60,
+  slideMargin: 30,
   addClass: 'project-slider-light',
+  responsive: [
+    {
+      breakpoint: 576,
+      settings: {
+        item: 1,
+        slideMargin: 30,
+      }
+    },
+  ]
   // adaptiveHeight: true,
 
 });
 
+$('.prev-project').on('click', function (e) {
+  e.preventDefault();
+  projectsSlider.goToPrevSlide();
+});
 $('.next-project').on('click', function (e) {
   e.preventDefault();
   projectsSlider.goToNextSlide();
@@ -80,14 +107,15 @@ let solutionsSlider = $('.solutions-slider');
 
 solutionsSlider.lightSlider({
   item: 1,
-  loop: false,
-  controls: false,
+  loop: true,
+  controls: true,
+  pager: false,
   slideMove: 1,
   easing: 'cubic-bezier(0.25, 0, 0.25, 1)',
   speed: 600,
   addClass: 'solutions-slider-light',
-  // adaptiveHeight: true,
-
+  adaptiveHeight: true,
+  slideMargin: 30
 });
 
 
@@ -144,6 +172,16 @@ multySlider.lightSlider({
         item: 2,
         // controls: true,
         enableDrag: false,
+        slideMargin: 30,
+      }
+    },
+    {
+      breakpoint: 820,
+      settings: {
+        item: 2,
+        // controls:false,
+        enableDrag: true,
+        slideMargin: 15,
       }
     },
     {
@@ -152,6 +190,7 @@ multySlider.lightSlider({
         item: 1,
         // controls:false,
         enableDrag: true,
+        slideMargin: 15,
       }
     }
   ],

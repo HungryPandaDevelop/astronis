@@ -2,7 +2,7 @@
 $('.close-js').on('click', function () {
     $(this).parents('.element-show').removeClass('show');
 });
-$('.popup-overlay-js').on('click',function(e){
+$('.popup-overlay-js').on('click', function (e) {
     $(this).parents('.element-show').removeClass('show');
 });
 
@@ -12,13 +12,13 @@ $(document).on('keyup', (evt) => {
     }
 });
 
-$('body').on('click','.element-btn', function (e) {
+$('body').on('click', '.element-btn', function (e) {
     e.preventDefault();
-    
+
     $('.element-show').removeClass('show');
     let activeIndex = $(this).attr('data-element');
-  
+    console.log("cl", activeIndex)
     $('[data-element="' + activeIndex + '"].element-show').addClass('show');
 
-    
+
 });

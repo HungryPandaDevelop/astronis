@@ -37,7 +37,7 @@ $time: 25s
   font-size: 14px
 
 .scroll-home
-  @include icoEl(30px,30px,"../images/arrows/carret-down-blue.svg")
+  @include icoEl(40px,40px,"../images/arrows/carret-down-blue.svg")
   cursor: pointer
 .main-home-img
   @include positionElement(100%,100%,0,0)
@@ -46,15 +46,15 @@ $time: 25s
   display: flex
   justify-content: space-between
 .main-home-text
-  max-width: 370px
+  max-width: 490px
   color: $blueColor
-  font-size: 15px
+  font-size: 21px
   color: $blueColor
   background: #83D7FF
-  background: linear-gradient(to top right, #83D7FF 10%, #37AAE1 90%)
+  background: $gradientMain
   -webkit-background-clip: text
   -webkit-text-fill-color: transparent
-  font-weight: 700
+  font-weight: 400
 .main-home-address
   max-width: 230px
   text-align: right
@@ -180,4 +180,7 @@ $time: 25s
     h2
       font-size: 16px
     h1
-      font-size: 64px
+      font-size: 34px
+  .main-home-text
+    font-size: 15px
+    line-height: 1.4

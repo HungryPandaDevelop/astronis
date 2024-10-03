@@ -2,10 +2,11 @@ $icoSize: 24px
 $icoOffset: 8px
 
 .close-btn
-	@include icoEl($icoSize, $icoSize, "../images/icons/close-black.svg")
+	@include icoEl(28px, 28px, "../images/icons/close-white.svg")
+
 	cursor: pointer
 	&:hover
-		background-image: url("../images/icons/close-gray.svg")
+		background-image: url("../images/icons/close-black.svg")
 
 .hamburger-btn
 	@include icoEl(38px, 38px, "../images/icons/hamburger-white.svg", middle, contain, center right)
@@ -45,13 +46,21 @@ $icoOffset: 8px
 	border-color: $blackColor
 
 .prev-btn
-	@include icoBtn("../images/arrows/arrow-left-black.svg", "../images/arrows/arrow-left-gray.svg")
-
+	@include icoBtn("../images/arrows/arrow-left-white.svg", "../images/arrows/arrow-left-blue.svg")
+	&:hover
+		color: $blueColor
 .next-btn
-	@include icoBtn("../images/arrows/arrow-right-black.svg", "../images/arrows/arrow-right-gray.svg")
-
+	@include icoBtn("../images/arrows/arrow-right-white.svg", "../images/arrows/arrow-right-blue.svg")
+	&:hover
+		color: $blueColor
 .more-btn
 	@include icoBtn("../images/arrows/carret-right-blue.svg", "../images/arrows/carret-right-white.svg")
+	i
+		background-size: 32px
+	&:hover
+		color: $blueColor
+.more-btn--prev
+	@include icoBtn("../images/arrows/carret-left-blue.svg", "../images/arrows/carret-left-white.svg")
 	i
 		background-size: 32px
 	&:hover
@@ -95,3 +104,17 @@ $icoOffset: 8px
 // 			width: 50px
 // 			height: 50px
 // 			background-position: 19px
+.prev-project,
+.next-project
+	text-decoration: none
+	i
+		background-size: 32px
+	&:hover
+		color: $blueColor
+.prev-project
+	@include icoBtn("../images/arrows/carret-left-blue.svg", "../images/arrows/carret-left-white.svg")
+	i
+
+.next-project
+	@include icoBtn("../images/arrows/carret-right-blue.svg", "../images/arrows/carret-right-white.svg")
+	i

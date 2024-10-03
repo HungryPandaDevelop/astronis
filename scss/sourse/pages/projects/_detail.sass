@@ -11,12 +11,24 @@
     width: 100%
 .projects-info-img
   margin-bottom: 45px
-
+.projects-info-date
+  span
+    display: block
 .projects-info-city
   margin-bottom: 30px
+.projects-detail-light
+  max-width: 1240px
+  // padding: 0 50px
+  margin: 0 auto
+  .lSSlideWrapper
+    width: 980px
+  .projects-slider-img
+    left: 70px
+    width: calc(100% - 140px)
 .projects-slider-detail
-  height: 700px
+  height: 500px
   position: relative
+
   .projects-slider-item ,
   .main-grid,
   .projects-slider-col
@@ -24,6 +36,7 @@
 .projects-slider-info
   position: absolute
   bottom: 0
+  left: 90px
   padding: 30px
   background: rgba(55, 170, 225, 0.30)
   padding: 30px
@@ -31,3 +44,39 @@
   font-size: 36px
 .projects-slider-col
   position: relative
+.projects-detail-light
+  .lSPrev, .lSNext
+    margin: 0 0px
+@media (max-width: 1024px)
+  .projects-detail-light
+    max-width: 840px
+    margin: 0 auto
+  .projects-slider-detail
+    height: 400px
+@media (max-width: 920px)
+  .projects-detail-light
+    max-width: 720px
+    margin: 0 auto
+  .projects-slider-detail
+    height: 300px
+@media (max-width: 576px)
+  .projects-detail-light .projects-slider-img
+    width: 100%
+    left: 0
+  .projects-slider-info
+    font-size: 18px
+  .projects-slider-item
+    height: 300px !important
+  .projects-info-wrapper
+    grid-row: 1/ span 1
+  .projects-detail-light
+    .lSPrev,
+    .lSNext
+      display: none !important
+    .lSSlideWrapper
+      width: 80%
+      overflow: visible
+  .projects-slider-info
+    font-size: 14px
+    width: 80%
+    left: 0

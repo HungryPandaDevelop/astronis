@@ -1,24 +1,17 @@
-.services-item
+.competencies-item
   background-color: $blueColor
   color: $whiteColor
   position: relative
-
+  border-radius: 0 50px 0 50px
+  overflow: hidden
   a
     text-decoration: none
     cursor: none
   h3
     color: $whiteColor
     margin-bottom: 8px
-  .services-item-price
-    display: inline-block
-    font-size: $smallSize
-    background-color: $whiteColor
-    padding: 3px 30px
-    color: $blueColor
-    border-radius: 15px
-    text-transform: uppercase
-    font-weight: 600
-  .services-item-text
+
+  .competencies-item-text
     margin-top: 0px
     position: relative
     transition: ease-out 0.5s
@@ -28,9 +21,12 @@
   .btn-container
     text-align: right
     max-width: 80%
-.services-item-stub
-  @include positionElement(100%,100%)
-
+.competencies-item-stub
+  @include positionElement(100%,100%, 0,0,left, top, 3)
+.competencies-item-gradient
+  @include positionElement(100%,100%, 0,0,left, top, 2)
+  background: linear-gradient(0deg, #000 0%, rgba(0, 0, 0, 0.00) 100%)
+  opacity: 0.4
 .btn-item-plus
   width: 84px
   height: 84px
@@ -40,7 +36,7 @@
     width: 100%
     height: 100%
     border-radius: 100%
-    background-color: $goldColor
+    border: 4px solid $whiteColor
     color: $whiteColor
     font-size: 60px
     display: inline-flex
@@ -49,12 +45,12 @@
   span
     margin: auto
     font-weight: 200
-.services-item-info
+.competencies-item-info
   padding: 30px 22px 50px
   position: relative
   margin-top: auto
-
-.services-item-img
+  z-index: 2
+.competencies-item-img
   height: 414px
   display: flex
   position: relative
@@ -70,7 +66,7 @@
     .img-cover
       transform: scale(1.1)
       opacity: 0.6
-    .services-item-text
+    .competencies-item-text
       max-height: 300px
       padding-top: 30px
       opacity: 1

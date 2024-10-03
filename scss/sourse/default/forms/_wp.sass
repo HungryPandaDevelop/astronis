@@ -20,19 +20,26 @@
 
 	.wpcf7-list-item-label
 		&:before
-			@include positionElement(21px, 21px, 0px, 2px)
-			background-color: $goldColor
-			border-radius: 0%
-			border: 0
+			@include positionElement(20px, 20px, 0px, 0px)
+			border: 1px solid $grayColor
+			background-color: $whiteColor
+			border-radius: 100%
 			cursor: pointer
-
+		&:after
+			content: ""
+			background: none
+			@include positionElement(16px, 16px, 3px, 3px)
+			background-color: $blueColor
+			border-radius: 100%
+			display: none
 	input
 		&:checked~.wpcf7-list-item-label
+			// background-color: $whiteColor
+			border-color: $blackColor
 			&:after
-				background: none
-				@include positionElement(16px, 16px, 2px, 4px)
-				@include bgImageEl("../images/icons/agree-black.svg")
-
+				display: block
+.wpcf7-not-valid-tip
+	color: #d3dc32
 .wpcf7-spinner
 	background-color: #03ac9f
 	position: absolute
@@ -48,8 +55,10 @@
 	color: $blackColor
 	margin: 0
 .wpcf7-not-valid-tip
-	margin-top: -15px
-	margin-bottom: 15px
+	// margin-top: -15px
+	// margin-bottom: 15px
+	position: absolute
+	font-size: $microSize
 .popup form	.wpcf7-response-output
 	position: relative
 	grid-column: span 12

@@ -17,7 +17,8 @@ $gap: 30px
 	padding: 0 $indent
 	max-width: $maxWidth
 	margin: 0 auto
-
+	position: relative
+	z-index: 3
 section
 	padding: 75px 0 0px
 	position: relative
@@ -28,18 +29,23 @@ section
 
 .head-section
 	margin-bottom: 30px
-	font-size: 21px
+	font-size: 18px
 	color: $blueColor
+	font-weight: 400
 	background: #83D7FF
-	background: linear-gradient(to top right, #83D7FF 10%, #37AAE1 90%)
+	background: $gradientMain
 	-webkit-background-clip: text
 	-webkit-text-fill-color: transparent
+	position: relative
+	z-index: 2
 	// font-weight: 500
 
 .section-topic
 	margin-top: -30px
 	position: relative
 	z-index: 4
+	line-height: 1
+	font-size: 30px
 	i
 		display: inline-block
 		width: 100px
@@ -48,6 +54,8 @@ section
 	span
 		display: block
 		color: $blueColor
+	a
+		text-decoration: none
 .btn-container-section
 	padding: 40px 0 0px
 	text-align: center
@@ -57,20 +65,19 @@ section
 .breadcrumbs
 	font-size: $smallSize
 	padding: 8px 8px
-	color: $grayColor
+	color: $whiteColor
 	position: relative
 	z-index: 2
-	background-color: $whiteColor
+	// background-color: $whiteColor
 
-	border-bottom: 1px solid $whiteColorSecond
+	// border-bottom: 1px solid $whiteColorSecond
 	em
 		font-size: 0
-		margin-left: 5px
-		@include icoEl(20px, 20px, "../images/arrows/carret-right-gray.svg", middle, 130%)
+		@include icoEl(20px, 20px, "../images/arrows/carret-right-white.svg", middle, 130%)
 		vertical-align: middle
 	a
 		text-decoration: none
-		color: $blackColor
+		color: $blueColor
 		vertical-align: middle
 		&:hover
 			text-decoration: underline
@@ -83,12 +90,23 @@ section
 .content
 	position: relative
 	min-height: calc(100vh - 130px)
+	z-index: 2
 	h1
 		padding: 10px 0 30px
 		color: $blueColor
-
+		background: $gradientMain
+		-webkit-background-clip: text
+		-webkit-text-fill-color: transparent
+.main-content
+	position: relative
+	z-index: 2
 .section-stub
 	height: 75px
 @media (max-width: 576px)
 	.head-section
 		font-size: 14px
+	.content h1
+		font-size: 24px
+@media (max-width: 320px)
+	.main-grid
+		gap: 0
